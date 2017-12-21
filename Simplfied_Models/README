@@ -1,0 +1,8 @@
+Attached models are models for CalcHEP
+
+/Simplified_Models/models includes two simplified models,
+
+Model 15: New scalar resonance Y  with new fermion coupling with Y, Higgs and neutrino
+Model 16: New scalar resonance Y, new fermion coupling with Y, Higgs and new DM particle (fermion)
+
+To generate events in batch mode, new models should be added with ./calchep manually.

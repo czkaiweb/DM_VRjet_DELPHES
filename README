@@ -10,7 +10,12 @@ Add
 in .bashrc 
 
 //  Event generation with CalcHep 
+Simplfied model files are attached in Simplified_Models/models
+model15 and model16 are two simplified models which should be added into $CALCHEP/models
 
+Setup_parton_generator.sh help to setup working folder for CalcHEP
+Script for CalcHEP parameter scanning are collected in calchep_script
+To run parton level simulation, it is necessary to add new models in working dictionary with ./calchepmanually. Batch mode generation is then available with CalcHEP scripts.
 
 
 //   Plugging Variable-R jet algorithm
