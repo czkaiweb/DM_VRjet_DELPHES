@@ -1,1 +1,36 @@
 #README#
+Needed package:
+
+CalcHEP: Calcualte simplfied model at parton level
+CheckMATE: Call PYTHIA and DELPHES threads from .lhe to .root results
+
+Add 
+  export DELPHES_PATH=/PATH/TO/YOUR/DELPHES 
+  export CALCHEP_PATH=/PATH/TO/YOUR/CALCHEP
+in .bashrc 
+
+//  Event generation with CalcHep 
+
+
+
+//   Plugging Variable-R jet algorithm
+
+1. VariableR_jet
+Plug VariableR algorithm package in Delphes, described as VariableR_jet/README
+
+2.JetAlgoModification
+
+Replace "FastJetFinder.cc" and "FastJetFinder.h" in $DELPHES/modules
+
+In DELPHES:
+./configure
+make -j10
+make install
+
+Variable-R jet algorithm has been added into Delphes and available in CheckMATE
+
+//  Detector simulation with CheckMATE
+
+
+
+
