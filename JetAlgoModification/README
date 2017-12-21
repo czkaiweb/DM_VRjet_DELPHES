@@ -1,0 +1,36 @@
+These two modified files add VariableR jet algorithm in default "FastJetFinder" module in Delphes
+
+Replace "FastJetFinder.cc" and "FastJetFinder.h" in
+$DELPHES/modules
+
+a.Modifocation in  “FastJetFinder.cc” 
+
+L69: 
+#include "$Delphes-3.4.0/external/fastjet/include/fastjet/contrib/VariableRPlugin.hh"
+
+L112:
+  // add parameters for VR
+  fMaxR = GetDouble("MaxR",2.0);
+  fMinR = GetDouble("MinR",0.2);
+  fRho = GetDouble("Rho",250);
+  fClusterType = GetDouble("ClusterType",-1);
+
+L247(add):
+    case 9:
+      fVariableRPlugin = new VariableRPlugin(fRho, fMinR, fMaxR, fClusterType);
+      fDefinition = new JetDefinition(fVariableRPlugin);
+
+
+b.Modification in “FastJetFinder.h”
+
+L45(Add):     
+“class VariableRPlugin;”
+in  class “contrib”
+
+L91:
+  //-- VariableR parameters --
+  Double_t fMaxR;
+  Double_t fMinR;
+  Double_t fRho;
+  Double_t fClusterType;
+

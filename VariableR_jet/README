@@ -1,0 +1,5 @@
+
+
+./VariableR is one external package with Variable-R jet algorithm in FastJet.
+To use this package in Delphes simulation:
+cp -r ./VariableR $Delphes/external/fastjet/contribs
