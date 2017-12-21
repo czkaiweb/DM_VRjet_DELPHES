@@ -1,0 +1,15 @@
+Needed packages are CalcHEP and CheckMATE
+
+CalcHEP packages (Alexander Pukhov,Alexander Belyaev,Neil Christensen) are available in 
+http://theory.sinp.msu.ru/~pukhov/calchep.html
+
+calchep_3.6.27 is adopted here
+
+Full CheckMATE packages can be found in https://checkmate.hepforge.org/
+
+In this repository, ChechMATE-2.0.11 is adopted.
+
+Installation tutorial is provided by its developers:
+http://checkmate.hepforge.org/tutorial/ver2/start.php
+
+For convinience, two packages are attached in /Needed_Package
