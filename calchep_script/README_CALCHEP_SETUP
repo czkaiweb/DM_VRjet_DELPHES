@@ -1,0 +1,16 @@
+In this package, CalcHEP is used as parton level generator.
+
+To setup CalcHEP, 
+	run ./SetupCalcHEP $EventName $BatchName
+A working area ./$EventName would be created, a batch file from calchep_script/batch will be added into working area for parameter scan.
+
+Existed batch files include:
+ a. batch_YsFswDM_hhmet_scan: A new scalar, a new fermion, DM particle(fermion), Dihiggs(4b) production with MET
+    Model:Ys-Ff-DM-s-channel
+    MDM(mass of dark matter particle) should be set, 1GeV as default
+    When gYqq fixed, scanning over:
+	gYgg, MY, MF
+    When gYgg fixed, scanning over:
+	gYqq, MY, MF
+ 
+ 
