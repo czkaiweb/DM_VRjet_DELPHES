@@ -1,15 +1,47 @@
 #README#
-Needed package:
+
+1.  Needed package:
 
 CalcHEP: Calcualte simplfied model at parton level
 CheckMATE: Call PYTHIA and DELPHES threads from .lhe to .root results
 
-Add 
-  export DELPHES_PATH=/PATH/TO/YOUR/DELPHES 
+Add
+  export DELPHES_PATH=/PATH/TO/YOUR/DELPHES
   export CALCHEP_PATH=/PATH/TO/YOUR/CALCHEP
-in .bashrc 
+  export CHECKMATE_PATH=/PATH/TO/YOUR/CHECKMATE
+in .bashrc
+
+2.
+//  Setup Analysis Working folder
+  run ./SetupAnalysis.sh $AnalysisName
+
+  Suggested way for $AnalysisName is "ModelName_AnalysisMethod_ExperimentCondition"
+  SimplifiedDM_dijet_ATLAS13TeV
+  SimplifiedDM_HHMET_VariableR_ATLAS13TeV
+  ...
+
+//   Plugging Variable-R jet algorithm
+
+   run ./SetupVariableR.sh (Only once in the same repository, multiple analysis will share the same algorithm)
+
+	1. VariableR_jet
+	Plug VariableR algorithm package in Delphes, described as VariableR_jet/README
+
+	2.JetAlgoModification
+
+	Replace "FastJetFinder.cc" and "FastJetFinder.h" in $DELPHES/modules
+        Original versions are stored in $DELPHES/modules/FastJetFinder_default
+
+   In DELPHES:
+   ./configure
+   make -j10
+   make install
+
+   Variable-R jet algorithm has been added into Delphes and available in CheckMATE
+
 
 //  Event generation with CalcHep 
+
 Simplfied model files are attached in Simplified_Models/models
 model15 and model16 are two simplified models which should be added into $CALCHEP/models
 
@@ -17,22 +49,6 @@ Setup_parton_generator.sh help to setup working folder for CalcHEP
 Script for CalcHEP parameter scanning are collected in calchep_script
 To run parton level simulation, it is necessary to add new models in working dictionary with ./calchepmanually. Batch mode generation is then available with CalcHEP scripts.
 
-
-//   Plugging Variable-R jet algorithm
-
-1. VariableR_jet
-Plug VariableR algorithm package in Delphes, described as VariableR_jet/README
-
-2.JetAlgoModification
-
-Replace "FastJetFinder.cc" and "FastJetFinder.h" in $DELPHES/modules
-
-In DELPHES:
-./configure
-make -j10
-make install
-
-Variable-R jet algorithm has been added into Delphes and available in CheckMATE
 
 //  Detector simulation with CheckMATE
 
