@@ -8,7 +8,7 @@ cp    calchep_script/README_CALCHEP_SETUP $AnalysisName
 #cp    calchep_script/Storedata.sh $AnalysisName
 chmod 755 $AnalysisName/SetupCalcHEP.sh
 mkdir $AnalysisName/Delphes/
-cp    CheckMATE_script/* $AnalysisName
+cp    CheckMATE_script/* $AnalysisName/Delphes
 mkdir $AnalysisName/data
 mkdir $AnalysisName/Delphes_result
 mkdir $AnalysisName/BoostedAnalysis
