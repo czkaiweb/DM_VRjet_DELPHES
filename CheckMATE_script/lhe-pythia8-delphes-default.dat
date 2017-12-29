@@ -1,0 +1,12 @@
+[Parameters]
+Name:
+OutputDirectory: /home/weikai/work/calchep/delphes_results/
+Analyses: atlas13tev
+SkipAnalysis: True
+SkipEvaluation: True
+SkipParamCheck: True
+WriteDelphesEvents: True
+OutputExists: Overwrite
+
+[myprocess]
+Pythia8Card: /home/weikai/work/calchep/delphes/pythia8card-default.dat

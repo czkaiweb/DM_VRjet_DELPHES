@@ -5,7 +5,7 @@ To setup CalcHEP,
 A working area ./$EventName would be created, a batch file from calchep_script/batch will be added into working area for parameter scan.
 
 Existed batch files include:
- a. batch_YsFswDM_hhmet_scan: A new scalar, a new fermion, DM particle(fermion), Dihiggs(4b) production with MET
+ a. batch_YsFfwDM_hhmet_scan: A new scalar, a new fermion, DM particle(fermion), Dihiggs(4b) production with MET
     Model:Ys-Ff-DM-s-channel
     MDM(mass of dark matter particle) should be set, 1GeV as default
     When gYqq fixed, scanning over:
@@ -13,4 +13,20 @@ Existed batch files include:
     When gYgg fixed, scanning over:
 	gYqq, MY, MF
  
- 
+ b. batch_YsFfnu_hhmet_scan: A new scalar, a new fermion, Dihiggs(4b) production with MET
+
+    Model:Ys-Ff-DM-s-channel
+    MDM(mass of dark matter particle) should be set, 1GeV as default
+    When gYqq fixed, scanning over:
+        gYgg, MY, MF
+    When gYgg fixed, scanning over:
+        gYqq, MY, MF
+
+ c.batch_YsFfnu_dijet_scan: dijet (SM quark pair) production in model with Y F
+    Model:Ys-Ff-nu-s-channel
+    Process: p,p -> Y -> j,j
+    p = u,U,d,D,G
+    j = u,U,d,D,G,s,S,c,C,b,B
+
+After generating, Storedata.sh will help to trasnfer Event files and cross-section numerical results in ./data folder.
+
