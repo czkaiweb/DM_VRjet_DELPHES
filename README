@@ -12,7 +12,10 @@ Add
 in .bashrc
 
 2.
-//  Setup Analysis Working folder
+
+  A. Setup Analysis Working folder
+
+  SetupAnalysis.sh can create working folder for your event genaration and analysis
   run ./SetupAnalysis.sh $AnalysisName
 
   Suggested way for $AnalysisName is "ModelName_AnalysisMethod_ExperimentCondition"
@@ -20,9 +23,9 @@ in .bashrc
   SimplifiedDM_HHMET_VariableR_ATLAS13TeV
   ...
 
-//   Plugging Variable-R jet algorithm
+  B. Plugging Variable-R jet algorithm
 
-   run ./SetupVariableR.sh (Only once in the same repository, multiple analysis will share the same algorithm)
+  run ./SetupVariableR.sh (Only once in the same repository, multiple analysis will share the same algorithm)
 
 	1. VariableR_jet
 	Plug VariableR algorithm package in Delphes, described as VariableR_jet/README
@@ -40,18 +43,26 @@ in .bashrc
    Variable-R jet algorithm has been added into Delphes and available in CheckMATE
 
 
-//  Event generation with CalcHep 
+  C.  Event generation with CalcHep 
 
-Simplfied model files are attached in Simplified_Models/models
-model15 and model16 are two simplified models which should be added into $CALCHEP/models
+  In the Analysis Working foler, 
+  SetupCalcHEP.sh create CalcHEP working folder
 
-Setup_parton_generator.sh help to setup working folder for CalcHEP
-Script for CalcHEP parameter scanning are collected in calchep_script
-To run parton level simulation, it is necessary to add new models in working dictionary with ./calchepmanually. Batch mode generation is then available with CalcHEP scripts.
+  Simplfied model files are attached in Simplified_Models/models
+  model15 and model16 are two simplified models which should be added into $CALCHEP/models
+
+  Setup_parton_generator.sh help to setup working folder for CalcHEP
+  Script for CalcHEP parameter scanning are collected in calchep_script
+  To run parton level simulation, it is necessary to add new models in working dictionary with ./calchep manually. Batch mode generation is then available with CalcHEP scripts.
 
 
-//  Detector simulation with CheckMATE
+  D.  Detector simulation with CheckMATE
+  
+  SetupDelphesCard.sh plug needed delphes card to CheckMATE, User can build their own cards. For now, all cards will be seen as ATLAS_13TeV cards. 
 
+  !! IMPORTANT: Every time delphes cards are updated, it will cause global change. It is strongly recommended that avoid runnning simualtions with different delphes cards in parallel.
+
+  
 
 
 

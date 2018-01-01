@@ -1,0 +1,21 @@
+CheckMATE is applied to make fast detector simulation thread with PYTHIA and DELPHES.
+
+In ./Delphes, some scripts help to produce python scripts for running delphes simulation
+
+   pre_run.py:
+	dataname: gYgg/gYqq (select the scanning mode)
+	Setup scanning parameter in event generation
+	MY_l,MY_l,gYqq_l,gYgg_l
+   	
+	run_script contains all scripts produced.
+   
+
+   prepare_delphes.py: 
+	$NAME need be modified according to name of LHE files
+	
+   
+In ./detector_configure
+	A sample ATLAS 13TeV delphes card is applied.
+	Modification for delphes card can be done in $AnalysisWorking/CheckMATE_script/detector_configure
+	Use SetupDelphesCard to replace orignal version in CheckMATE
+	Original cards will be stored in $CHECKMATE_PATH/data/cards_original
