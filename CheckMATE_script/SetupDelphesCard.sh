@@ -7,5 +7,5 @@ else
 	echo "cards backup already stored"
 fi
 
-cp ../detector_configure/* $CHECKMATE_PATH/data/cards
+cp Delphes/detector_cards/delphes_skimmed_ATLAS_13TeV.tcl $CHECKMATE_PATH/data/cards
 

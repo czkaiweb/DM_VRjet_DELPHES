@@ -1,5 +1,20 @@
 CheckMATE is applied to make fast detector simulation thread with PYTHIA and DELPHES.
 
+Once one has LHE file as parton level events:
+
+	Step1. Setup the name of events in Delphes/prepare_delphes.py
+	Step2. Setup scanning parameter points of LHE data
+	Step3. run 
+		$python pre_run.py gYgg
+	       or 
+		$python pre_run.py gYqq
+	       to generate scripts for CheckMATE
+	Step4.(optinal)
+		update the detector_cards for detector simualtion
+	Step5. run
+		$./runlocal.sh gYgg (gYqq)
+
+
 In ./Delphes, some scripts help to produce python scripts for running delphes simulation
 
    pre_run.py:
@@ -14,8 +29,17 @@ In ./Delphes, some scripts help to produce python scripts for running delphes si
 	$NAME need be modified according to name of LHE files
 	
    
-In ./detector_configure
+In ./Delphes/detector_cards, one can prepare the detector configuration
 	A sample ATLAS 13TeV delphes card is applied.
-	Modification for delphes card can be done in $AnalysisWorking/CheckMATE_script/detector_configure
-	Use SetupDelphesCard to replace orignal version in CheckMATE
-	Original cards will be stored in $CHECKMATE_PATH/data/cards_original
+	Modification for detector card can be done here. To store one's own detector cards, Delphes/detector_cards/my_cards will help
+
+
+
+Before using CheckMATE for detector simulation:
+
+	./SetupDelphesCard.sh to replace orignal version in CheckMATE
+
+SetupDelphesCards.sh only use Delphes/detector_cards/delphes_skimmed_ATLAS_13TeV.tcl for CheckMATE.
+
+	Original cards attached with CheckMATE will be stored in $CHECKMATE_PATH/data/cards_original
+
