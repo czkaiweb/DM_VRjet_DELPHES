@@ -32,6 +32,8 @@ for pline1 in fin1:
 	pline1n=str(pline1)
 	if 'Name:' in pline1:
 		pline1n=str(pline1.split()[0])+filename+'\n' #Full_
+	if 'OutputDirectory:' in pline1:
+		pline1n=str(pline1.split()[0])+dirpath+'/../Delphes_results'+'\n' #Full_
 	if 'Pythia8Card:' in pline1:
 		pline1n=str(pline1.split()[0])+dirpath+'/delphes_cards/'+filename+'-pythia8card.dat\n' #Full_
 	fout1.write(pline1n);
