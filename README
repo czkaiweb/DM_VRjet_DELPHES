@@ -15,6 +15,8 @@ in .bashrc
 
   A. Setup Analysis Working folder
 
+  Each Analysis Working folder should include the SAME parton level events. Within the Working folder,it is recommanded to apply only one detector configuration for fast detector simualtion. Multiple benchmark or analysis with same detector configuration can be integrated in the same Working folder.
+
   SetupAnalysis.sh can create working folder for your event genaration and analysis
   run ./SetupAnalysis.sh $AnalysisName
 
@@ -22,6 +24,7 @@ in .bashrc
   SimplifiedDM_dijet_ATLAS13TeV
   SimplifiedDM_HHMET_VariableR_ATLAS13TeV
   ...
+
 
   B. Plugging Variable-R jet algorithm
 
