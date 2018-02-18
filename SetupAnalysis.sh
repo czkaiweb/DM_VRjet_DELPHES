@@ -23,3 +23,4 @@ mkdir $AnalysisName/Delphes_result
 mkdir $AnalysisName/BoostedAnalysis
 mkdir $AnalysisName/VariableRAnalysis
 mkdir $AnalysisName/ResolvedAnalysis
+cp    Analysis/ResolvedAnalysis/*  $AnalysisName/ResolvedAnalysis/
