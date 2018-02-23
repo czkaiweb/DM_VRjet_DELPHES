@@ -9,7 +9,9 @@ Add
   export DELPHES_PATH=/PATH/TO/YOUR/DELPHES
   export CALCHEP_PATH=/PATH/TO/YOUR/CALCHEP
   export CHECKMATE_PATH=/PATH/TO/YOUR/CHECKMATE
-in .bashrc
+
+for C shell, use "set" 
+in .bashrc/.bash_profile
 
 2.
 
