@@ -14,7 +14,7 @@ mkdir $AnalysisName/Delphes/run_scripts
 mkdir $AnalysisName/Delphes/detector_cards/my_cards
 cp    CheckMATE_script/Delphes/* $AnalysisName/Delphes
 cp    CheckMATE_script/detector_configure/delphes_skimmed_ATLAS_13TeV.tcl $AnalysisName/Delphes/detector_cards
-cp    CheckMATE_script/detector_configure/* $AnalysisName/Delphes/detector_cards/mycards
+cp    CheckMATE_script/detector_configure/* $AnalysisName/Delphes/detector_cards/my_cards
 cp    CheckMATE_script/SetupDelphesCard.sh $AnalysisName
 chmod 755 $AnalysisName/SetupDelphesCard.sh
 cp    CheckMATE_script/README_CheckMATE $AnalysisName
