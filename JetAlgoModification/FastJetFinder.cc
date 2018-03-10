@@ -66,7 +66,7 @@
 #include "fastjet/contribs/Nsubjettiness/ExtraRecombiners.hh"
 //#include "fastjet/contribs/VariableR/VariableR.hh"
 //#include "fastjet/contribs/VariableR/VariableRPlugin.hh"
-#include "/home/weikai/work/tools/Delphes-3.4.0/external/fastjet/include/fastjet/contrib/VariableRPlugin.hh"
+#include "fastjet/contribs/VariableR/VariableRPlugin.hh"
 
 #include "fastjet/tools/Filter.hh"
 #include "fastjet/tools/Pruner.hh"
