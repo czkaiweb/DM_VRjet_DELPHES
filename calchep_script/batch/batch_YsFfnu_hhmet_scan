@@ -227,7 +227,7 @@ alpha Q :            MY
 #     :n: specifies which process.            #
 #     : means to apply to all processes.      #
 ###############################################
-Kinematics :     12 -> 3 , 4
+Kinematics :     12 -> 3 
 #Kinematics :    12 -> 345  , 678
 #Kinematics :    345 -> 34 , 5
 #Kinematics : 	678 -> 67 , 8
